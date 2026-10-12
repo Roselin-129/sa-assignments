@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Details</title>
+    <link rel="icon" href="doreamon.png" type="image?icon">
+
+    <style>
+         body {
+            background-color: rgba(241, 230, 243, 0.808);
+            font-family: 'Times New Roman';
+            margin: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(1, 1, 1);
+            text-align: center;
+        }
+
+        h2 {
+            color: rgb(1, 1, 1);
+            text-align: center;
+        }
+
+        h3 {
+            color: rgb(0, 0, 0);
+        }
+        table {
+            margin: 15px auto;
+            width: 60%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        th {
+            background-color: thistle;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.5;
+        }
+         button {
+            background-color: rgb(239, 235, 174);
+            color: rgb(15, 13, 13);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .approved {
+            color: green;
+        }
+
+        .waiting {
+            color: rgb(231, 231, 67);
+        }
+
+        .rejected {
+            color: red;
+        }
+
+        .approved,
+        .waiting,
+        .rejected {
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>My Profile</h1>
+     <img src="learning.png" alt="My Photo" width="150" height="150">
+    <h2>Roselin Angel D</h2>
+    <h3>Personal Details</h3>
+
+    <table border="1">
+        <tr>
+            <th>Field</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Roselin Angel D</td>
+        </tr>
+        <tr>
+            <td>Branch</td>
+            <td>Computer Science and Engineering (CSE)</td>
+        </tr>
+        <tr>
+            <td>Qualification</td>
+            <td>B.E. Computer Science and Engineering</td>
+        </tr>
+        <tr>
+            <td>Career Interest</td>
+            <td>Full Stack Development</td>
+        </tr>
+    </table>
+     
+
+    <h3>My Skills</h3>
+
+    <table border="2">
+        <tr>
+            <th>S.No</th>
+            <th>Skill</th>
+            <th>Level</th>
+            <th>status</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>HTML</td>
+            <td>Beginner</td>
+            <td class="approved">approved</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>CSS</td>
+            <td>Beginner</td>
+            <td class="waiting">waiting</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>JavaScript</td>
+            <td>Learning</td>
+            <td class="rejected">rejected</td>
+        </tr>
+    </table>
+
+    <h3>Button</h3>
+
+    <button onclick="alert('Welcome to my profile!')">
+        Click Me
+    </button>
+
+
+</body>
+</html>
+

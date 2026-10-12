@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>Roselin Angel D - Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f0f0;
+    color: #000000;
+    margin: 0;
+    padding: 30px 15px;
+    line-height: 1.6;
+}
+
+.resume {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+header {
+    text-align: center;
+    background-color: #7a7575;
+    color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 8px 0 15px;
+    font-size: 16px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    font-size: 13px;
+}
+
+.contact a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 25px;
+}
+
+h2 {
+    font-size: 19px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+section p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.item {
+    margin-bottom: 18px;
+}
+
+.details {
+    font-size: 13px;
+    color: #444444;
+    font-style: italic;
+}
+
+ul {
+    padding-left: 22px;
+    margin-top: 8px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #000000;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .resume {
+        padding: 18px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+}
+
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+    .resume {
+        max-width: 100%;
+        border: none;
+        box-shadow: none;
+        padding: 15px;
+    }
+
+    section {
+        break-inside: avoid;
+    }
+
+    a {
+        color: #000000;
+    }
+
+    header {
+        background-color: #ffffff;
+        color: #000000;
+        border: 2px solid #000000;
+    }
+
+    .contact a {
+        color: #000000;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="resume">
+
+        <header>
+            <h1>Roselin Angel D</h1>
+            <p>Computer Science Engineering Student</p>
+
+            <div class="contact">
+                <span>Chennai, India</span>
+                <span><a href="tel:+919840998255">+91 9840998255</a></span>
+                <span><a href="mailto:davidrosy204@gmail.com">davidrosy204@gmail.com</a></span>
+                <span><a href="https://github.com/Roselin-129" target="_blank">GitHub Profile</a></span>
+            </div>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <p>
+                Motivated Computer Science Engineering student and problem-solver
+                with experience creating websites and software projects.
+                Eager to learn, adapt, and contribute effectively in a professional
+                environment while gaining practical experience.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+
+            <h3>Programming Languages</h3>
+            <p>Python</p>
+
+            <h3>Web Development</h3>
+            <p>HTML, React, Next.js, MongoDB</p>
+
+            <h3>Software and Tools</h3>
+            <p>Microsoft Word, Excel, SQL</p>
+
+            <h3>Languages Known</h3>
+            <p>English, Tamil</p>
+        </section>
+
+        <section>
+            <h2>Educational Qualification</h2>
+
+            <div class="item">
+                <h3>B.E. in Computer Science Engineering</h3>
+                <p>S.A. Engineering College</p>
+                <p class="details">2023–2027 | CGPA: 7.93</p>
+            </div>
+
+            <div class="item">
+                <h3>Higher Secondary Certificate (HSC)</h3>
+                <p>St. Aloysius A.I. Hr. Sec. School</p>
+                <p class="details">2023 | 75.9%</p>
+            </div>
+
+            <div class="item">
+                <h3>Secondary School Leaving Certificate (SSLC)</h3>
+                <p>St. Aloysius A.I. Hr. Sec. School</p>
+                <p class="details">2021 | 80%</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="item">
+                <h3>QuizNova AI – AI-Powered Quiz Management Platform</h3>
+                <p class="details">
+                    2026 | ASP.NET Core Web API, Next.js, PostgreSQL, Tailwind CSS
+                </p>
+                <ul>
+                    <li>Built a full-stack quiz platform with secure JWT authentication.</li>
+                    <li>Developed Teacher and Student dashboards for quiz creation,
+                        AI-assisted question generation, quiz attempts, and automatic scoring.</li>
+                    <li>Implemented REST APIs, database integration, and result tracking.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Stock Maintenance Website</h3>
+                <p class="details">2024</p>
+                <ul>
+                    <li>Developed an inventory management system to add, purchase,
+                        and update product stock.</li>
+                    <li>Implemented stock tracking and transaction management.</li>
+                    <li>Designed an interface to monitor product availability
+                        and recent transactions.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Personal Portfolio with Admin Panel</h3>
+                <p class="details">2025 | HTML, CSS, JavaScript</p>
+                <ul>
+                    <li>Created a responsive portfolio website showcasing skills,
+                        projects, and contact information.</li>
+                    <li>Built an admin panel to manage portfolio content.</li>
+                    <li>Separated public pages from authenticated admin functionality.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Internship Experience</h2>
+
+            <div class="item">
+                <h3>Software Development Intern – Nimu Technology</h3>
+                <p class="details">May 2026 – June 2026</p>
+                <ul>
+                    <li>Completed a one-month Full Stack Web Development internship.</li>
+                    <li>Gained hands-on experience in frontend and backend development.</li>
+                    <li>Learned responsive web application development and
+                        full-stack development concepts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications and Achievements</h2>
+            <ul>
+                <li>Infosys certification in Frontend Developer.</li>
+                <li>Cisco Networking Academy certificates in Networking Basics
+                    and Introduction to Cybersecurity.</li>
+                <li>AWS Academy Cloud Foundations.</li>
+                <li><strong>Winner – Paper Presentation</strong>, National Level
+                    Technical Symposium "TECHNOCRATZ 2K26", Dr. M.G.R.
+                    Educational and Research Institute, April 2026.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Workshops</h2>
+            <ul>
+                <li>Cybersecurity Essentials: Protecting Your Digital Footprints –
+                    IEEE Madras Section, S.A. Engineering College, August 2024.</li>
+                <li>Nurturing the Entrepreneur: Turning Opportunities into Success –
+                    Two-Day Workshop, S.A. Engineering College, December 2024.</li>
+            </ul>
+        </section>
+
+        
+    </div>
+
+</body>
+</html>
+```
