@@ -1,324 +1,599 @@
-
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <title>Roselin Angel D - Resume</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-
+    <title>Roselin's Portfolio</title>
+<style>
 * {
     box-sizing: border-box;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f0f0;
-    color: #000000;
     margin: 0;
-    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #222;
     line-height: 1.6;
 }
-
-.resume {
-    max-width: 900px;
-    margin: auto;
-    padding: 35px;
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    box-shadow: 0 0 10px #cccccc;
-}
-
-header {
-    text-align: center;
-    background-color: #7a7575;
-    color: #ffffff;
-    padding: 25px 15px;
-    border-radius: 5px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header p {
-    margin: 8px 0 15px;
-    font-size: 16px;
-}
-
-.contact {
+a { color: #2457a7; }
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 10px 20px;
-    font-size: 13px;
+    padding: 15px 7%;
+    border-bottom: 1px solid #ddd;
+    background: white;
 }
-
-.contact a {
-    color: #ffffff;
+.logo {
+    color: #222;
+    font-size: 22px;
+    font-weight: bold;
     text-decoration: none;
 }
 
-.contact a:hover {
-    text-decoration: underline;
+.logo span, .hero h1 span { color: #2457a7; }
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
-section {
-    margin-top: 25px;
+.nav-links a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
 }
 
-h2 {
-    font-size: 19px;
-    text-transform: uppercase;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 6px;
-    margin-bottom: 15px;
+.nav-links a:hover, footer a:hover { text-decoration: underline; }
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 55px 8%;
+    background: #f5f7fa;
+    border-bottom: 1px solid #ddd;
 }
 
-h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+.hero-content { max-width: 650px; }
+.welcome, .skill-icon, .project-number, .timeline-date, .project-subtitle, .muted { color: #555; }
+.welcome, .skill-icon, .project-number, .timeline-date { font-size: 13px; }
+.hero h1 { margin: 10px 0; font-size: 36px; }
+.hero h2 { font-size: 20px; font-weight: normal; }
+.intro { max-width: 600px; }
+
+.hero-buttons, .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-section p {
-    margin-top: 4px;
-    margin-bottom: 8px;
+.hero-buttons { margin: 20px 0; }
+.social-links { gap: 15px; font-size: 14px; }
+
+.btn {
+    display: inline-block;
+    padding: 9px 14px;
+    border: 1px solid #2457a7;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.item {
-    margin-bottom: 18px;
+.primary-btn, .photo-btn {
+    background: #2457a7;
+    color: white;
 }
 
-.details {
-    font-size: 13px;
-    color: #444444;
-    font-style: italic;
+.secondary-btn {
+    background: white;
+    color: #2457a7;
 }
 
-ul {
-    padding-left: 22px;
-    margin-top: 8px;
-}
+.btn:hover { background: #e8eef8; color: #222; }
 
-li {
-    margin-bottom: 5px;
-}
-
-footer {
+.hero-image {
+    width: 150px;
+    flex-shrink: 0;
     text-align: center;
-    border-top: 1px solid #000000;
-    margin-top: 30px;
-    padding-top: 10px;
+}
+
+.photo-frame {
+    width: 140px;
+    height: 175px;
+    margin: 0 auto 12px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.photo-frame img {
+    width: 128px;
+    height: 163px;
+    object-fit: cover;
+}
+
+.photo-frame img[hidden], .photo-placeholder[hidden] { display: none; }
+
+.photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 128px;
+    height: 163px;
+    background: #eee;
+    color: #333;
+}
+
+.photo-placeholder span { font-size: 32px; font-weight: bold; }
+.photo-placeholder p { margin: 0; }
+
+.photo-btn {
+    padding: 7px 12px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 40px 25px;
+    scroll-margin-top: 20px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-heading h2 {
+    margin: 0 0 10px;
+    font-size: 27px;
+    color: #2457a7;
+}
+
+.about-card, .contact-card, .skill-card, .project-card, .timeline-item {
+    padding: 18px;
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.about-card, .contact-card { padding: 20px; }
+
+.skills-grid, .projects-grid, .timeline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.skill-card h3, .project-card h3, .timeline-item h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.skill-card p, .project-card p, .timeline-item p { font-size: 14px; }
+
+.project-subtitle { font-style: italic; }
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tags span {
+    padding: 3px 8px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
     font-size: 12px;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+.achievement-list { padding-left: 22px; }
+.achievement-list li { margin-bottom: 10px; }
+.contact-details a { overflow-wrap: anywhere; }
 
-    .resume {
-        padding: 18px;
-    }
-
-    header {
-        padding: 20px 10px;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .contact {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    h2 {
-        font-size: 17px;
-    }
+footer {
+    padding: 18px;
+    border-top: 1px solid #ddd;
+    background: #f5f5f5;
+    text-align: center;
+    font-size: 14px;
 }
 
-@media print {
-    body {
-        background-color: #ffffff;
-        padding: 0;
-    }
+footer a { text-decoration: none; }
 
-    .resume {
-        max-width: 100%;
-        border: none;
-        box-shadow: none;
+/* Dark Mode */
+
+body.dark-theme {
+    background: #121212;
+    color: #eee;
+}
+
+.dark-theme .navbar, .dark-theme .hero, .dark-theme footer,
+.dark-theme .about-card, .dark-theme .contact-card,
+.dark-theme .skill-card, .dark-theme .project-card,
+.dark-theme .timeline-item {
+    background: #1e1e1e;
+    border-color: #444;
+}
+
+.dark-theme .logo, .dark-theme .nav-links a,
+.dark-theme .hero h1, .dark-theme .hero h2,
+.dark-theme .hero p, .dark-theme .section p,
+.dark-theme .section li, .dark-theme .section h3,
+.dark-theme footer, .dark-theme .about-card,
+.dark-theme .contact-card, .dark-theme .skill-card,
+.dark-theme .project-card, .dark-theme .timeline-item {
+    color: #eee;
+}
+
+.dark-theme .logo span, .dark-theme .hero h1 span,
+.dark-theme .section-heading h2, .dark-theme a {
+    color: #6da8ff;
+}
+
+.dark-theme .section-heading { border-color: #444; }
+
+.dark-theme .welcome, .dark-theme .skill-icon,
+.dark-theme .project-number, .dark-theme .timeline-date,
+.dark-theme .project-subtitle, .dark-theme .muted {
+    color: #bbb;
+}
+
+.dark-theme .tags span {
+    background: #333;
+    border-color: #555;
+    color: #eee;
+}
+
+.dark-theme .photo-frame {
+    background: #1e1e1e;
+    border-color: #555;
+}
+
+.dark-theme .photo-placeholder {
+    background: #333;
+    color: white;
+}
+
+.dark-theme .secondary-btn {
+    background: #1e1e1e;
+    color: #6da8ff;
+}
+
+.dark-theme .primary-btn, .dark-theme .photo-btn {
+    background: #2457a7;
+    color: white;
+}
+
+.dark-theme #theme-toggle {
+    padding: 7px 12px;
+    background: #333;
+    color: white;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
         padding: 15px;
     }
 
-    section {
-        break-inside: avoid;
+    .nav-links {
+        justify-content: center;
+        gap: 10px 15px;
     }
 
-    a {
-        color: #000000;
+    .hero {
+        flex-direction: column-reverse;
+        padding: 35px 20px;
+        text-align: center;
     }
 
-    header {
-        background-color: #ffffff;
-        color: #000000;
-        border: 2px solid #000000;
+    .hero h1 { font-size: 29px; }
+
+    .hero-buttons, .social-links { justify-content: center; }
+
+    .skills-grid, .projects-grid, .timeline {
+        grid-template-columns: 1fr;
     }
 
-    .contact a {
-        color: #000000;
-    }
+    .section { padding: 30px 18px; }
 }
-    </style>
+
+@media print {
+    .navbar, .photo-btn, .hero-buttons { display: none; }
+}
+</style>
 </head>
+
 <body>
 
-    <div class="resume">
+    <nav class="navbar">
+        <button id="theme-toggle">Dark Mode</button>
+        <a href="#home" class="logo">Roselin David<span>.</span></a>
 
-        <header>
-            <h1>Roselin Angel D</h1>
-            <p>Computer Science Engineering Student</p>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-            <div class="contact">
-                <span>Chennai, India</span>
-                <span><a href="tel:+919840998255">+91 9840998255</a></span>
-                <span><a href="mailto:davidrosy204@gmail.com">davidrosy204@gmail.com</a></span>
-                <span><a href="https://github.com/Roselin-129" target="_blank">GitHub Profile</a></span>
-            </div>
-        </header>
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <p class="welcome">Hello, welcome to my portfolio</p>
 
-        <section>
-            <h2>About Me</h2>
-            <p>
-                Motivated Computer Science Engineering student and problem-solver
-                with experience creating websites and software projects.
-                Eager to learn, adapt, and contribute effectively in a professional
-                environment while gaining practical experience.
+            <h1>Hi, I'm Roselin Angel D</h1>
+
+            <h2>Computer Science Engineering Student</h2>
+
+            <p class="intro">
+                I enjoy building websites, exploring new technologies,
+                and turning ideas into useful digital experiences.
+                I'm always ready to learn something new and improve my skills.
             </p>
-        </section>
 
-        <section>
-            <h2>Technical Skills</h2>
-
-            <h3>Programming Languages</h3>
-            <p>Python</p>
-
-            <h3>Web Development</h3>
-            <p>HTML, React, Next.js, MongoDB</p>
-
-            <h3>Software and Tools</h3>
-            <p>Microsoft Word, Excel, SQL</p>
-
-            <h3>Languages Known</h3>
-            <p>English, Tamil</p>
-        </section>
-
-        <section>
-            <h2>Educational Qualification</h2>
-
-            <div class="item">
-                <h3>B.E. in Computer Science Engineering</h3>
-                <p>S.A. Engineering College</p>
-                <p class="details">2023–2027 | CGPA: 7.93</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View My Projects</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                <a href="resume.pdf" download class="btn primary-btn"> Download Resume</a>
             </div>
 
-            <div class="item">
-                <h3>Higher Secondary Certificate (HSC)</h3>
-                <p>St. Aloysius A.I. Hr. Sec. School</p>
-                <p class="details">2023 | 75.9%</p>
+            <div class="social-links">
+                <a href="https://github.com/Roselin-129"
+                   target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                <span>Chennai, India</span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="photo-frame">
+                <img id="myPhoto" src="my photo.jpeg"
+                     alt="Roselin's profile photo" hidden>
+
+                <div id="photoPlaceholder" class="photo-placeholder">
+                    <span>RA</span>
+                    <p>My Profile</p>
+                </div>
             </div>
 
-            <div class="item">
-                <h3>Secondary School Leaving Certificate (SSLC)</h3>
-                <p>St. Aloysius A.I. Hr. Sec. School</p>
-                <p class="details">2021 | 80%</p>
+            <button type="button" id="photoButton" class="photo-btn">
+                View Photo
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="about">
+            <div class="section-heading">
+                <h2>About <span>Me</span></h2>
             </div>
-        </section>
 
-        <section>
-            <h2>Projects</h2>
-
-            <div class="item">
-                <h3>QuizNova AI – AI-Powered Quiz Management Platform</h3>
-                <p class="details">
-                    2026 | ASP.NET Core Web API, Next.js, PostgreSQL, Tailwind CSS
+            <div class="about-card">
+                <p>
+                    I'm a Computer Science Engineering student at S.A. Engineering
+                    College with an interest in web development and software
+                    engineering. I have worked on projects involving frontend
+                    development, APIs, databases, and application features.
                 </p>
-                <ul>
-                    <li>Built a full-stack quiz platform with secure JWT authentication.</li>
-                    <li>Developed Teacher and Student dashboards for quiz creation,
-                        AI-assisted question generation, quiz attempts, and automatic scoring.</li>
-                    <li>Implemented REST APIs, database integration, and result tracking.</li>
-                </ul>
+                <p>
+                    I believe the best way to learn is by building real projects,
+                    solving problems, and learning from mistakes. My goal is to
+                    keep growing as a developer and contribute to meaningful
+                    software projects.
+                </p>
+            </div>
+        </section>
+        <section class="section" id="skills">
+            <div class="section-heading">
+                <h2>My <span>Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, React, Next.js</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Database and APIs</h3>
+                    <p>SQL, MongoDB, PostgreSQL, REST APIs</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Tools and Languages</h3>
+                    <p>Microsoft Word, Excel, English, Tamil</p>
+                </article>
+            </div>
+        </section>
+        <section class="section" id="projects">
+            <div class="section-heading">
+                <h2>My <span>Projects</span></h2>
             </div>
 
-            <div class="item">
-                <h3>Stock Maintenance Website</h3>
-                <p class="details">2024</p>
-                <ul>
-                    <li>Developed an inventory management system to add, purchase,
-                        and update product stock.</li>
-                    <li>Implemented stock tracking and transaction management.</li>
-                    <li>Designed an interface to monitor product availability
-                        and recent transactions.</li>
-                </ul>
-            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-number">Project 01</div>
+                    <h3>QuizNova AI</h3>
+                    <p class="project-subtitle">
+                        AI-Powered Quiz Management Platform
+                    </p>
 
-            <div class="item">
-                <h3>Personal Portfolio with Admin Panel</h3>
-                <p class="details">2025 | HTML, CSS, JavaScript</p>
-                <ul>
-                    <li>Created a responsive portfolio website showcasing skills,
-                        projects, and contact information.</li>
-                    <li>Built an admin panel to manage portfolio content.</li>
-                    <li>Separated public pages from authenticated admin functionality.</li>
-                </ul>
+                    <p>
+                        A full-stack quiz platform with teacher and student
+                        dashboards, quiz creation, AI-assisted question generation,
+                        automatic scoring, and result tracking.
+                    </p>
+
+                    <div class="tags">
+                        <span>Next.js</span>
+                        <span>ASP.NET Core</span>
+                        <span>PostgreSQL</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-number">Project 02</div>
+                    <h3>Stock Maintenance Website</h3>
+                    <p class="project-subtitle">Inventory Management</p>
+
+                    <p>
+                        A website designed to manage product stock, record
+                        purchases, update inventory, and monitor product
+                        availability and recent transactions.
+                    </p>
+
+                    <div class="tags">
+                        <span>Web Development</span>
+                        <span>Inventory</span>
+                        <span>Stock Tracking</span>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section>
-            <h2>Internship Experience</h2>
+        <section class="section" id="education">
+            <div class="section-heading">
+                <h2>Education &amp; <span>Experience</span></h2>
+            </div>
 
-            <div class="item">
-                <h3>Software Development Intern – Nimu Technology</h3>
-                <p class="details">May 2026 – June 2026</p>
-                <ul>
-                    <li>Completed a one-month Full Stack Web Development internship.</li>
-                    <li>Gained hands-on experience in frontend and backend development.</li>
-                    <li>Learned responsive web application development and
-                        full-stack development concepts.</li>
-                </ul>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <span class="timeline-date">2023 – 2027</span>
+                    <h3>B.E. Computer Science Engineering</h3>
+                    <p>S.A. Engineering College</p>
+                    <p class="muted">CGPA: 7.93</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">May 2026 – June 2026</span>
+                    <h3>Software Development Intern</h3>
+                    <p>Nimu Technology</p>
+                    <p class="muted">
+                        Completed a one-month Full Stack Web Development
+                        internship and gained practical exposure to frontend
+                        and backend development.
+                    </p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">2023</span>
+                    <h3>Higher Secondary Certificate</h3>
+                    <p>St. Aloysius A.I. Hr. Sec. School</p>
+                    <p class="muted">75.9%</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-date">2021</span>
+                    <h3>Secondary School Leaving Certificate</h3>
+                    <p>St. Aloysius A.I. Hr. Sec. School</p>
+                    <p class="muted">80%</p>
+                </article>
             </div>
         </section>
 
-        <section>
-            <h2>Certifications and Achievements</h2>
-            <ul>
-                <li>Infosys certification in Frontend Developer.</li>
-                <li>Cisco Networking Academy certificates in Networking Basics
-                    and Introduction to Cybersecurity.</li>
-                <li>AWS Academy Cloud Foundations.</li>
-                <li><strong>Winner – Paper Presentation</strong>, National Level
-                    Technical Symposium "TECHNOCRATZ 2K26", Dr. M.G.R.
-                    Educational and Research Institute, April 2026.</li>
-            </ul>
+        <section class="section" id="achievements">
+            <div class="section-heading">
+                <h2>Certifications &amp; <span>Achievements</span></h2>
+            </div>
+
+            <div class="about-card">
+                <ul class="achievement-list">
+                    <li>Infosys certification in Frontend Developer.</li>
+                    <li>
+                        Cisco Networking Academy certificates in Networking Basics
+                        and Introduction to Cybersecurity.
+                    </li>
+                    <li>AWS Academy Cloud Foundations.</li>
+                    <li>
+                        Winner – Paper Presentation at the national-level technical
+                        symposium "TECHNOCRATZ 2K26", Dr. M.G.R. Educational and
+                        Research Institute, April 2026.
+                    </li>
+                    <li>
+                        Attended the IEEE Madras Section workshop "Cybersecurity
+                        Essentials: Protecting Your Digital Footprints" at
+                        S.A. Engineering College, August 2024.
+                    </li>
+                    <li>
+                        Attended the two-day workshop "Nurturing the Entrepreneur:
+                        Turning Opportunities into Success" at S.A. Engineering
+                        College, December 2024.
+                    </li>
+                </ul>
+            </div>
         </section>
+        <section class="section" id="contact">
+            <div class="section-heading">
+                <h2>Get in <span>Touch</span></h2>
+            </div>
+            <div class="contact-card">
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:davidrosy204@gmail.com">
+                        davidrosy204@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+919840998255">+91 9840998255</a>
+                </p>
 
-        <section>
-            <h2>Workshops</h2>
-            <ul>
-                <li>Cybersecurity Essentials: Protecting Your Digital Footprints –
-                    IEEE Madras Section, S.A. Engineering College, August 2024.</li>
-                <li>Nurturing the Entrepreneur: Turning Opportunities into Success –
-                    Two-Day Workshop, S.A. Engineering College, December 2024.</li>
-            </ul>
+                <p><strong>Location:</strong> Chennai, India</p>
+                <p>
+                    <strong>GitHub:</strong>
+                    <a href="https://github.com/Roselin-129"
+                       target="_blank" rel="noopener noreferrer">
+                        Roselin-129
+                    </a>
+                </p>
+
+                <a href="mailto:davidrosy204@gmail.com"
+                   class="btn primary-btn">Send Me an Email</a>
+            </div>
         </section>
+    </main>
+    <footer>
+        <a href="#home">Back to top</a>
+    </footer>
+    <script>
+        const photo = document.getElementById("myPhoto");
+        const placeholder = document.getElementById("photoPlaceholder");
+        const button = document.getElementById("photoButton");
 
-        
-    </div>
+        button.addEventListener("click", function () {
+            const showPhoto = photo.hidden;
 
+            photo.hidden = !showPhoto;
+            placeholder.hidden = showPhoto;
+            button.textContent = showPhoto ? "Hide Photo" : "View Photo";
+        });
+
+        const themeButton = document.getElementById("theme-toggle");
+
+    themeButton.addEventListener("click", function () {
+        document.body.classList.toggle("dark-theme");
+
+        if (document.body.classList.contains("dark-theme")) {
+            themeButton.textContent = "Light Mode";
+        } else {
+            themeButton.textContent = "Dark Mode";
+        }
+    });
+    </script>
 </body>
 </html>
-```
