@@ -13,3 +13,9 @@ console.log("Sum:", sum);
 
 const num = numbers.find(n => n > 20);
 console.log("Number:", num);
+
+async function showNumber() {
+    return 100;
+}
+
+showNumber().then(n => console.log("Async:", n));
